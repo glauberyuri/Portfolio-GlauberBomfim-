@@ -1,5 +1,7 @@
 import { Inter, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
+import { Header } from './components/header'
+
 import { ReactNode } from 'react'
 
 const inter = Inter({
@@ -17,6 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
       <body>
+        <Header />
         {children}
       </body>
     </html>
